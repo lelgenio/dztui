@@ -1,6 +1,68 @@
 # Changelog
 
-## [4.1.0] 2023-12-03
+## [5.2.1] 2024-04-01
+### Fixed
+- Fixed a regression where where the first-time setup dialog would not trigger auto-path discovery
+
+### Changed
+- Reworded some menus and dialogs for clarity
+
+## [5.2.0] 2024-03-21
+### Added
+- Refresh player count for active row: invoke via right-click context meu or directly with the Ctrl-r hotkey. This feature has a 30 second global cooldown to prevent throttling.
+
+### Fixed
+- Improve case-insensitive keyword search to be portable across awk versions (previous version required gawk)
+- Fixed a dialog string from being shown twice when adding a server to favorites via context menus
+
+### Changed
+- Use a more robust method for downloading mods when auto mod install is enabled
+
+## [5.1.1] 2024-03-18
+### Fixed
+- Hotfix for remote helper files not being fetched correctly
+
+## [5.1.0] 2024-03-18
+### Added
+- Make columns in the server browser user-resizable (affects Server Browser, My Servers, and Recent Servers)
+- Save dragged position of user-resized columns
+- Display ping to server in statusbar: by popular request, added the ability to visualize both distance to server and round-trip latency (ping), at the cost of a small calculation delay. Please leave feedback regarding whether this feature feels fast/responsive enough.
+
+### Fixed
+- Fixed a rare scenario in Auto Mod Install Mode where defunct mods (mods no longer available on Steam) would try to be downloaded if the user had previously downloaded the mod
+
+## [5.0.0] 2024-01-31
+### Added
+- Context switching: navigate to different pages using side buttons
+- Dynamic statusbar: updates metadata and server distance when selecting rows
+- Show server-side modlist and allow jumping to Steam Workshop pages to browse, and list whether mod is currently installed
+- Print debug logs in-app (Help > Show debug log)
+- Functionality to change API keys in-app (used when revoking old API keys)
+- Print atomic mod sizes when listing installed mods
+- Dialogs show direct links to API key management URLs when changing API keys
+- Toggle dry-run mode directly from server browser
+- Extensive keybindings for fully controlling the application without the mouse
+- Extensive pre-boot sanity checks
+- Keybinding help dialog in main menu
+- Right-click context menus in server browsers/mod list: add/remove from favorites, show server-side mods, delete mod, copy server IP to clipboard
+
+### Changed
+- Utilize GTK bindings and MVC paradigm for UI creation and data flow
+- Filter servers dynamically from within server browser
+- Performance and security improvements to DZGUI helper files
+
+### Fixed
+- First-time setup dialogs respawning repeatedly in certain scenarios
+- Issues with Steam client switching to the wrong page when using auto-mod install
+- Set text input module correctly when launching on Steam Deck
+- Separate current/total player count and use proper integer sort method in table
+
+## [4.1.1] 2023-12-18
+### Fixed
+
+- News marquee not showing
+
+## [4.1.0] 2023-12-17
 
 This update adds support for DayZ servers running on a local area network. To connect or add to your server list, supply the server IP and query port in the format IP:PORT.
 
