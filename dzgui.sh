@@ -10,7 +10,7 @@ app_name="dzgui"
 app_name_upper="DZGUI"
 workshop="steam://url/CommunityFilePage/"
 sd_res="--width=1280 --height=800"
-steamsafe_zenity="/usr/bin/zenity"
+steamsafe_zenity="zenity"
 zenity_flags=("--width=500" "--title=DZGUI")
 declare -A deps
 deps=([awk]="5.1.1" [curl]="7.80.0" [jq]="1.6" [tr]="9.0" [$steamsafe_zenity]="3.42.1")
@@ -352,7 +352,7 @@ prompt_dl(){
 	Your branch: $branch
 	Your version: $version
 	Upstream version: $upstream
-	
+
 	Version updates introduce important bug fixes and are encouraged. Attempt to download the latest version?
 	EOF
     }
