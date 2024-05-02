@@ -820,7 +820,6 @@ initial_setup(){
     lock
     legacy_vars
     check_version
-    check_map_count
     steam_deps
     migrate_files
     stale_symlinks
