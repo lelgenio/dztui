@@ -819,7 +819,6 @@ initial_setup(){
     source "$config_file"
     lock
     legacy_vars
-    check_version
     steam_deps
     migrate_files
     stale_symlinks
